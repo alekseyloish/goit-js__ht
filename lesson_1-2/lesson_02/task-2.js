@@ -4,7 +4,6 @@
     var enterOk = false;
     var regName = /^[а-яА-ЯёЁa-zA-Z]+$/;
 
-
     function checkName(val) {
         if (regName.test(val)) {
             return true;
@@ -26,7 +25,7 @@
         }
     }
 
-    console.log(listOfNames);
+    console.log('Список имен: ' + listOfNames);
 
     var userName = prompt('Введите имя пользователя:');
     for (var i = 0; i < listOfNames.length; i++) {
