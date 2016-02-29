@@ -2,15 +2,33 @@
     
     var listOfNames = [];
     var enterOk = false;
+    var regName = /^[а-яА-ЯёЁa-zA-Z]+$/;
 
-    for (var i = 0; i < 5; i++) {
-        listOfNames[i] = prompt('Заполните массив именами:');
+
+    function checkName(val) {
+        if (regName.test(val)) {
+            return true;
+        } else {
+            alert('Введите имя корректно!')
+            return false;
+        }
+    }
+
+    var i = 0;
+    while (i < 5) {
+        var currentName = prompt('Заполните массив именами:');
+
+        if ( currentName !== '' ) {
+            if ( checkName(currentName) ) {
+                listOfNames[i] = currentName;
+                i++;
+            }
+        }
     }
 
     console.log(listOfNames);
 
     var userName = prompt('Введите имя пользователя:');
-
     for (var i = 0; i < listOfNames.length; i++) {
 
         if (userName == listOfNames[i]) {
