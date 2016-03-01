@@ -1,0 +1,13 @@
+.form-quiz {
+    max-width: 600px;
+}
+
+.list-group-item {
+    display: list-item;
+    list-style-position: inside;
+    font-size: 18px;
+}
+
+.checkbox-group {
+    font-size: 14px;
+}
