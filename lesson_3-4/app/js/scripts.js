@@ -2,25 +2,6 @@
 
 var body = document.body;
 
-/*
-var container = document.createElement('div');
-container.classList.add('container');
-body.appendChild(container);
-
-var heading = document.createElement('h2');
-heading.classList.add('text-center');
-heading.innerHTML = 'Тест по программированию';
-container.appendChild(heading);
-
-var formContainer = document.createElement('form');
-formContainer.classList.add('form-quiz', 'center-block');
-container.appendChild(formContainer);
-
-var list = document.createElement('ol');
-list.classList('list-group');
-*/
-
-
 var app = {
 
     createElement: function(options) {
@@ -127,18 +108,6 @@ var app = {
         }
     },
 
-    generateForm: function(parent) {
-        var form = this.createElement({
-            tagName: 'form',
-            className: 'form-quiz center-block',
-            parentName: parent
-        });
-
-        this.generateList(form, 3, 4);
-
-        this.generateButton(form);
-    },
-
     generateButton: function(parent) {
         this.createElement({
             tagName: 'input',
@@ -149,6 +118,17 @@ var app = {
         });
     },
 
+    generateForm: function(parent) {
+        var form = this.createElement({
+            tagName: 'form',
+            className: 'form-quiz center-block',
+            parentName: parent
+        });
+
+        this.generateList(form, 3, 4);
+        this.generateButton(form);
+    },
+
     generatePage: function() {
         var container = this.createElement({
             tagName: 'div',
@@ -156,11 +136,10 @@ var app = {
         });
 
         this.generateHeading(container);
-
         this.generateForm(container)
     }
 };
 
-
 app.generatePage();
+
 
