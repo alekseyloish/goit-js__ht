@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <title>Lesson 05-06</title>
 
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Dev styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <div class="wrapper">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="timer  text-center">
+                <span class="timer__time">
+                    00:00:00
+                </span>
+                <span class="timer__milliseconds">000</span>
+            </div>
+            <div class="timer-control">
+                <a class="button-start  pull-left  btn btn-primary btn-lg" href="#" role="button">Start</a>
+                <a class="button-cancel   pull-right  btn btn-danger btn-lg" href="#" role="button">Clear</a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/scripts.js"></script>
 </body>
